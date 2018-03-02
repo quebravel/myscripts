@@ -1,0 +1,5 @@
+#!/bin/bash
+# mover para /bin e chmod +x
+cd ~/.zandronum
+
+./zandronum -iwad doom2.wad -file bd21testfeb24.pk3 -file DoomMetalVol4.wad
