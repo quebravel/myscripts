@@ -2,7 +2,7 @@
 # instalação mpd
 sudo emerge -aq media-sound/mpd
 
-# instalação ncmpcpp
+# instalação ncmpcpp (flags = clock curl outputs taglib unicode visualizer)
 sudo emerge -aq media-sound/ncmpcpp
 
 git clone https://github.com/quebravel/dotfiles-conf.git
