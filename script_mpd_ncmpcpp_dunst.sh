@@ -15,6 +15,8 @@ cd ~/dotfiles-conf/
 
 cp -rv .mpd .mcmpcpp ~/
 
+touch ~/.mpd/socket
+
 # instalação mpc
 sudo emerge media-sound/mpc
 
