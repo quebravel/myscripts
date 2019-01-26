@@ -16,7 +16,8 @@ sed -i 's/mime ^audio|ogg$, terminal, has mplayer  = mplayer -- "$@"/mime ^audio
 cd ~/
 mkdir Documentos Música Vídeo
 $t1
-echo 'inode/directory=ranger' >> ~/.local/share/applications/mimeapps.list
+echo "instalando o xterm para o navegador abrir a pasta downloads \n infelizmente o rxvt-unicode não abre ainda."
+emerge xterm
 $t1
 #/usr/share/applications/ranger.desktop
 echo 'mostrar diretorio'
