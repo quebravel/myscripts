@@ -2,7 +2,7 @@
 # instalação mpd
 sudo emerge -aq media-sound/mpd
 
-# instalação ncmpcpp (flags = clock curl outputs taglib unicode visualizer)
+# instalação ncmpcpp (flags = clock curl outputs taglib unicode visualizer inotify)
 sudo euse -E clock curl outputs taglib unicode visualizer
 
 sudo emerge -aq media-sound/ncmpcpp
