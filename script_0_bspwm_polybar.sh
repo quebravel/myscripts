@@ -8,7 +8,7 @@ git clone https://gitlab.com/quebravel/dotfiles-conf.git ~/
 $t1
 cp -r ~/dotfiles-conf/.config ~/.config/
 $t1
-chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/launch.sh
+chmod +x ~/.config/bspwm/bspwmrc ~/.config/bspwm/bspwm_resize.sh ~/.config/polybar/launch.sh
 $t1
 sudo -E ipc mpd network
 $t1
