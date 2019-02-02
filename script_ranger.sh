@@ -1,31 +1,69 @@
 #!/bin/bash
 
+t1=sleep 0.5
+
 echo "instalar/configurar ranger pastas"
-t1=sleep 1
+
+$t1
 
 euse gdk-pixbuf
+
 $t1
+
 emerge app-misc/ranger
+
+$t1
+
 ranger --copy-config=all
+
 $t1
+
 sed 's/set preview_images false/set preview_images true/g' ~/.config/ranger/rc.conf > ~/.config/ranger/rc.confi
+
 $t1
+
 sed 's/set colorscheme default/set colorscheme solarized/g' ~/.config/ranger/rc.confi > ~/.config/ranger/rc.conf
+
 $t1
+
 sed -i 's/mime ^audio|ogg$, terminal, has mplayer  = mplayer -- "$@"/mime ^audio|ogg$, terminal, has moc      = mocp -- "$@"/g' ~/.config/ranger/rifle.conf
+
+$t1
+
 cd ~/
+
+$t1
+
 mkdir Documentos Música Vídeo
+
 $t1
+
 echo "instalando o xterm para o navegador abrir a pasta downloads \n infelizmente o rxvt-unicode não abre ainda."
+
+$t1
+
 emerge xterm
+
 $t1
+
 #/usr/share/applications/ranger.desktop
+
 echo 'mostrar diretorio'
-xdg-mime query default inode/directory
+
 $t1
+
+xdg-mime query default inode/directory
+
+$t1
+
 echo 'adicionar ranger como gerenciador de arquivos padrão'
+
+$t1
+
 xdg-mime default ranger.desktop application/x-directory
+
+$t1
 
 ranger --version
 
-echo "ranger finalizado"
+echo "ranger file manager finalizado"

@@ -8,8 +8,9 @@ git clone https://gitlab.com/quebravel/dotfiles-conf.git ~/
 $t1
 cp -r ~/dotfiles-conf/.config ~/.config/
 $t1
-chmod +x ~/.config/bspwm/bspwmrc ~/.config/bspwm/bspwm_resize.sh ~/.config/polybar/launch.sh
+chmod u+x ~/.config/bspwm/bspwmrc ~/.config/bspwm/bspwm_resize.sh ~/.config/polybar/launch.sh
 $t1
+echo "ipc exibe comando shell na barra / mpd suporte a musica ncmpcpp / network suporte a internet."
 sudo -E ipc mpd network
 $t1
 sudo emerge -auDN @world
