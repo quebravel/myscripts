@@ -2,13 +2,15 @@
 
 t1=sleep 0.5
 
-echo "instalação mpd"
+echo -e "\033[41;1;37m>>>\033[0m instalação mpd"
+
+$t1
 
 sudo emerge -aq media-sound/mpd
 
 $t1
 
-echo "instalação ncmpcpp e flags = clock curl outputs taglib unicode visualizer inotify"
+echo -e "\033[41;1;37m>>>\033[0m instalação ncmpcpp e flags = clock curl outputs taglib unicode visualizer inotify"
 
 $t1
 
@@ -44,7 +46,7 @@ touch ~/.mpd/socket
 
 $t1
 
-echo "instalação mpc"
+echo -e "\033[41;1;37m>>>\033[0m instalação mpc"
 
 $t1
 
@@ -52,7 +54,7 @@ sudo emerge media-sound/mpc
 
 $t1
 
-echo "instalação dunst"
+echo -e "\033[41;1;37m>>>\033[0m instalação dunst"
 
 $t1
 
@@ -60,7 +62,7 @@ sudo emerge x11-misc/dunst
 
 $t1
 
-echo "adicionando ao iniciar/rc-update"
+echo -e "\033[41;1;37m>>>\033[0m adicionando ao iniciar/rc-update"
 
 $t1
 
@@ -74,4 +76,4 @@ $t1
 
 echo 'dunst &' >> ~/.xinitrc
 
-echo 'Pronto!'
+echo -e "\033[41;1;37m>>>\033[0m Pronto!"

@@ -2,7 +2,7 @@
 
 t1=sleep 0.5
 
-echo "instalando/configurando zsh/oh-my-zsh"
+echo -e "\033[41;1;37m>>>\033[0m instalando/configurando zsh/oh-my-zsh"
 
 $t1
 
@@ -14,7 +14,7 @@ emerge -q app-shells/{zsh,zsh-completions,gentoo-zsh-completions}
 
 $t1
 
-echo "ESCREVA O NOME DO USUÁRIO"
+echo "-> -> -> -> -> -> ESCREVA O NOME DO USUÁRIO <- <- <- <- <- <-"
 
 read opcao
 
@@ -32,4 +32,4 @@ $t1
 
 sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="agnoster"/g' ~/.zshrc
 
-echo "zsh/oh-my-zsh finalizado"
+echo -e "\033[41;1;37m>>>\033[0m zsh/oh-my-zsh finalizado"

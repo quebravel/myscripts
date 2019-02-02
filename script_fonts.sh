@@ -2,7 +2,7 @@
 
 t1=sleep 0.5
 
-echo "intalar/configurar fontes"
+echo -e "\033[41;1;37m>>>\033[0m intalar/configurar fontes"
 
 $t1
 
@@ -21,11 +21,16 @@ sh fonts/install.sh
 $t1
 
 emerge -qn dev-python/pip
+
+$t1
+
 pip install --user powerline-status
 
 $t1
 
 pip install --user git+git://github.com/powerline/powerline
+
+$t1
 
 wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
 
@@ -50,6 +55,7 @@ fc-cache -vf ~/.local/share/fonts/
 $t1
 
 xset +fp /usr/share/fonts/75dpi/
+
 xset fp rehash
 
 $t1
@@ -64,4 +70,4 @@ $t1
 
 eselect infinality set infinality
 
-echo "configuracao de fontes finalizada"
+echo -e "\033[41;1;37m>>>\033[0m configuracao de fontes finalizada"

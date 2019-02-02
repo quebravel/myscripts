@@ -27,4 +27,4 @@ if [[ -z $DISPLAY ]] && (( $EUID != 0 )) {
 
 $t1
 
-echo '>>> auto startx configurado'
+echo -e "\033[41;1;37m>>>\033[0m auto startx configurado"

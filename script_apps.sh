@@ -2,9 +2,9 @@
 
 t1=sleep 0.5
 
-echo "programas raiz"
+echo -e "\033[41;1;37m>>>\033[0m programas raiz"
 
-echo "abilitando flags"
+echo -e "\033[41;1;37m>>>\033[0m abilitando flags"
 
 euse -E python 256-color font-styles unicode3 mp4 mp3 ffmpeg 
 
@@ -18,12 +18,56 @@ euse -E jpeg dhcpcd nls lua X opengl pulseaudio xface png pixbuf
 
 $t1
 
+echo -e "\033[41;1;37m>>>\033[0m sessao flags finalizada"
+
 emerge -auDN @world
 
 $t1
 
-echo "instalando..."
+echo -e "\033[41;1;37m>>>\033[0m instalando..."
 
-emerge app-editors/{mousepad,vim} media-plugins/alsa-plugins media-sound/{pulseaudio,alsa-utils} media-video/mplayer app-text/{odt2txt,poppler} app-arch/{unrar,rar,unzip,zip,p7zip,atool} x11-misc/{numlockx,xcompmgr} www-client/w3m media-gfx/{scrot,feh} x11-apps/{xfd,xsetroot} sys-fs/{ntfs3g,dosfstools} x11-terms/{rxvt-unicode,xfce4-terminal}  dev-util/ctags sys-libs/ncurses dev-python/pyflakes
+emerge app-editors/{mousepad,vim}
 
-echo "programas raiz instalados"
+$t1
+
+emerge media-plugins/alsa-plugins
+
+$t1
+
+emerge media-sound/{pulseaudio,alsa-utils}
+
+$t1
+
+emerge media-video/mplayer app-text/{odt2txt,poppler}
+
+$t1
+
+emerge app-arch/{unrar,rar,unzip,zip,p7zip,atool}
+
+$t1
+
+emerge x11-misc/{numlockx,xcompmgr}
+
+$t1
+
+emerge www-client/w3m media-gfx/{scrot,feh}
+
+$t1
+
+emerge x11-apps/{xfd,xsetroot}
+
+$t1
+
+emerge sys-fs/{ntfs3g,dosfstools}
+
+$t1
+
+emerge x11-terms/{rxvt-unicode,xfce4-terminal}
+
+$t1
+
+emerge dev-util/ctags sys-libs/ncurses dev-python/pyflakes
+
+$t1
+
+echo -e "\033[41;1;37m>>>\033[0m programas raiz instalados"

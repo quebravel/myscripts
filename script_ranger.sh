@@ -2,7 +2,7 @@
 
 t1=sleep 0.5
 
-echo "instalar/configurar ranger pastas"
+echo -e "\033[41;1;37m>>>\033[0m instalar/configurar ranger pastas"
 
 $t1
 
@@ -38,7 +38,7 @@ mkdir Documentos Música Vídeo
 
 $t1
 
-echo "instalando o xterm para o navegador abrir a pasta downloads \n infelizmente o rxvt-unicode não abre ainda."
+echo -e "\033[41;1;37m>>>\033[0m instalando o xterm para o navegador abrir a pasta downloads \n infelizmente o rxvt-unicode não abre ainda."
 
 $t1
 
@@ -48,7 +48,7 @@ $t1
 
 #/usr/share/applications/ranger.desktop
 
-echo 'mostrar diretorio'
+echo -e "\033[41;1;37m>>>\033[0m mostrar diretorio"
 
 $t1
 
@@ -56,7 +56,7 @@ xdg-mime query default inode/directory
 
 $t1
 
-echo 'adicionar ranger como gerenciador de arquivos padrão'
+echo -e "\033[41;1;37m>>>\033[0m adicionar ranger como gerenciador de arquivos padrão"
 
 $t1
 
@@ -66,4 +66,4 @@ $t1
 
 ranger --version
 
-echo "ranger file manager finalizado"
+echo -e "\033[41;1;37m>>>\033[0m ranger file manager finalizado"

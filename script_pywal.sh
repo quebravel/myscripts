@@ -18,7 +18,7 @@ pip3 install --user .
 
 $t1
 
-echo "add configuração ao .zshrc"
+echo -e "\033[41;1;37m>>>\033[0m add configuração ao .zshrc"
 
 $t1
 
@@ -30,7 +30,7 @@ echo 'cat ~/.cache/wal/sequences' >> ~/.zshrc
 
 $t1
 
-echo 'add configuração ao bspwmrc'
+echo -e "\033[41;1;37m>>>\033[0m add configuração ao bspwmrc"
 
 $t1
 
@@ -38,8 +38,8 @@ echo 'feh --bg-tile "$(< "${HOME}/.cache/wal/wal")"' >> ~/.config/bspwm/bspwmrc
 
 $t1
 
-echo 'agora UTILIZE wal -i ~caminho do wallpapers de sua escolha'
+echo -e "\033[41;1;37m>>>\033[0m agora UTILIZE wal -i ~caminho do wallpapers de sua escolha"
 
 $t1
 
-echo 'instalacao e configuracao do pywal completo'
+echo -e "\033[41;1;37m>>>\033[0m instalacao e configuracao do pywal completo"
