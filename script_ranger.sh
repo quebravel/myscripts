@@ -26,6 +26,10 @@ sed 's/set colorscheme default/set colorscheme solarized/g' ~/.config/ranger/rc.
 
 $t1
 
+sed 's/set draw_borders none/set draw_borders both/g' ~/.config/ranger/rc.confi > ~/.config/ranger/rc.conf
+
+$t1
+
 sed -i 's/mime ^audio|ogg$, terminal, has mplayer  = mplayer -- "$@"/mime ^audio|ogg$, terminal, has moc      = mocp -- "$@"/g' ~/.config/ranger/rifle.conf
 
 $t1
