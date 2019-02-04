@@ -34,7 +34,7 @@ echo -e "\033[41;1;37m>>>\033[0m add configuração ao bspwmrc"
 
 $t1
 
-echo 'feh --bg-tile "$(< "${HOME}/.cache/wal/wal")"' >> ~/.config/bspwm/bspwmrc
+echo 'feh --bg-scale "$(< "${HOME}/.cache/wal/wal")"' >> ~/.config/bspwm/bspwmrc
 
 $t1
 
