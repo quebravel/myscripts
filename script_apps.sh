@@ -14,7 +14,7 @@ euse -E mpeg mplayer clipboard proprietary-codecs system-ffmpeg
 
 $t1
 
-euse -E jpeg dhcpcd nls lua X opengl pulseaudio xface png pixbuf
+euse -E jpeg dhcpcd nls lua X opengl pulseaudio xface png pixbuf xft
 
 $t1
 
