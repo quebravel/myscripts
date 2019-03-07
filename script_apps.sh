@@ -6,7 +6,7 @@ echo -e "\033[41;1;37m>>>\033[0m programas raiz"
 
 echo -e "\033[41;1;37m>>>\033[0m abilitando flags"
 
-euse -E python 256-color font-styles unicode3 mp4 mp3 ffmpeg windowmode
+euse -E python 256-color font-styles unicode3 mp4 mp3 ffmpeg
 
 $t1
 
@@ -46,7 +46,7 @@ emerge app-arch/{unrar,rar,unzip,zip,p7zip,atool}
 
 $t1
 
-emerge x11-misc/{numlockx,xcompmgr,rofi}
+emerge x11-misc/numlockx
 
 $t1
 
@@ -62,7 +62,7 @@ emerge sys-fs/{ntfs3g,dosfstools}
 
 $t1
 
-emerge x11-terms/{rxvt-unicode,xfce4-terminal}
+emerge x11-terms/{rxvt-unicode,urxvt-perls,urxvt-font-size}
 
 $t1
 
