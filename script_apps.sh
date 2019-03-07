@@ -46,7 +46,7 @@ emerge app-arch/{unrar,rar,unzip,zip,p7zip,atool}
 
 $t1
 
-emerge x11-misc/numlockx
+emerge x11-misc/{numlockx,urxvt-perls,urxvt-font-size}
 
 $t1
 
@@ -62,7 +62,7 @@ emerge sys-fs/{ntfs3g,dosfstools}
 
 $t1
 
-emerge x11-terms/{rxvt-unicode,urxvt-perls,urxvt-font-size}
+emerge x11-terms/rxvt-unicode
 
 $t1
 
