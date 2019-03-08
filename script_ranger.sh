@@ -6,13 +6,17 @@ echo -e "\033[41;1;37m>>>\033[0m instalar/configurar ranger pastas"
 
 $t1
 
-sudo euse -E gdk-pixbuf
+su root
+
+euse -E gdk-pixbuf
 
 $t1
 
-sudo emerge app-misc/ranger
+emerge app-misc/ranger
 
 $t1
+
+su jonatas
 
 ranger --copy-config=all
 
@@ -54,7 +58,9 @@ echo -e "\033[41;1;37m>>>\033[0m instalando o xterm para o navegador abrir a pas
 
 $t1
 
-sudo emerge xterm
+su root
+
+emerge xterm
 
 $t1
 
