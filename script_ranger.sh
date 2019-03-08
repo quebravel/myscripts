@@ -6,7 +6,6 @@ echo -e "\033[41;1;37m>>>\033[0m instalar/configurar ranger pastas"
 
 $t1
 
-
 euse -E gdk-pixbuf
 
 $t1
@@ -15,21 +14,19 @@ emerge app-misc/ranger
 
 $t1
 
-
-
 ranger --copy-config=all
 
 $t1
 
-sed 's/set preview_images false/set preview_images true/g' ~/.config/ranger/rc.conf > ~/.config/ranger/rc.confi
+sed -i 's/set preview_images false/set preview_images true/g' ~/.config/ranger/rc.conf
 
 $t1
 
-sed 's/set colorscheme default/set colorscheme solarized/g' ~/.config/ranger/rc.confi > ~/.config/ranger/rc.conf
+sed -i 's/set colorscheme default/set colorscheme solarized/g' ~/.config/ranger/rc.conf
 
 $t1
 
-sed 's/set draw_borders none/set draw_borders both/g' ~/.config/ranger/rc.confi > ~/.config/ranger/rc.conf
+sed -i 's/set draw_borders none/set draw_borders both/g' ~/.config/ranger/rc.conf
 
 $t1
 
@@ -56,8 +53,6 @@ $t1
 echo -e "\033[41;1;37m>>>\033[0m instalando o xterm para o navegador abrir a pasta downloads \n infelizmente o rxvt-unicode não abre ainda."
 
 $t1
-
-
 
 emerge xterm
 
