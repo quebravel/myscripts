@@ -10,8 +10,11 @@ euse -E infinality xft
 
 $t1
 
-emerge media-fonts/{droid,dejavu,fantasque-sans-mono,fontawesome,unifont} media-libs/{fontconfig-infinality,fontconfig}
+emerge media-fonts/{droid,dejavu,fantasque-sans-mono,fontawesome,unifont,powerline-symbols} media-libs/{fontconfig-infinality,fontconfig}
 
+# não instalar powerline manualmente instalar pelo pacote da distribuição.
+
+: '
 git clone https://github.com/powerline/fonts.git --depth=1
 
 $t1
@@ -49,8 +52,9 @@ mv PowerlineSymbols.otf ~/.local/share/fonts/
 $t1
 
 mv 10-powerline-symbols.conf /etc/fonts/conf.d/
+'
 
-git clone https://github.com/Tecate/bitmap-fonts.git ~/.local/share/fonts/52-infinality.conf
+git clone https://github.com/Tecate/bitmap-fonts.git ~/.local/share/fonts/bitmap-fonts
 
 $t1
 
