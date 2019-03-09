@@ -14,7 +14,6 @@ emerge media-fonts/{droid,dejavu,fantasque-sans-mono,fontawesome,unifont,powerli
 
 # não instalar powerline manualmente instalar pelo pacote da distribuição.
 
-: '
 git clone https://github.com/powerline/fonts.git --depth=1
 
 $t1
@@ -26,6 +25,8 @@ $t1
 sh fonts/install.sh
 
 $t1
+
+: '
 
 emerge -qn dev-python/pip
 
