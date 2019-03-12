@@ -40,6 +40,18 @@ sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="af-magic"/g' ~/.zshrc
 
 $t1
 
+wget https://raw.github.com/trapd00r/LS_COLORS/master/LS_COLORS -O $HOME/.dircolors
+
+$t1
+
+echo 'eval $(dircolors -b $HOME/.dircolors)' >> $HOME/.zshrc
+
+$t1
+
+. $HOME/.zshrc
+
+$t1
+
 
 sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="nanotech"/g' /root/.zshrc
 
