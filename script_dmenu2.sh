@@ -41,4 +41,4 @@ rm -r dmenu2-0.2 dmenu2-0.2.tar.gz
 
 echo -e '\033[01;34mPasta do dmenu2 removida!\033[0m'
 
-echo 'FIM DMENU2' 
+echo 'FIM DMENU2'
