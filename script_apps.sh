@@ -70,7 +70,7 @@ emerge dev-util/ctags sys-libs/ncurses dev-python/pyflakes
 
 $t1
 
-sh -c "$(wget  -O -)"
+sh -c "$(wget https://raw.githubusercontent.com/quebravel/myscripts/master/script_redshift.sh -O -)"
 
 $t1
 
