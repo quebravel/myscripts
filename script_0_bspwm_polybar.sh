@@ -37,4 +37,8 @@ sudo emerge x11-wm/bspwm x11-misc/{sxhkd,polybar}
 
 $t1
 
+echo "executando script de instalação do dmenu2"
+
+sh -c "$(wget https://raw.githubusercontent.com/quebravel/myscripts/master/script_dmenu2.sh -O -)"
+
 echo -e "\033[41;1;37m>>>\033[0m BSPWM, POLYBAR e SXHKD instalados"
