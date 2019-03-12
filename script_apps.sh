@@ -70,4 +70,8 @@ emerge dev-util/ctags sys-libs/ncurses dev-python/pyflakes
 
 $t1
 
+sh -c "$(wget  -O -)"
+
+$t1
+
 echo -e "\033[41;1;37m>>>\033[0m programas raiz instalados"
