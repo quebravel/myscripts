@@ -4,11 +4,11 @@ t1=sleep 1
 
 sudo mkdir -p /etc/portage/package.use
 
-touch /etc/portage/package.use/redshift
+sudo touch /etc/portage/package.use/redshift
 
 $t1
 
-echo '>=x11-misc/redshift-1.12 -gtk' >> /etc/portage/package.use/redshift
+sudo echo '>=x11-misc/redshift-1.12 -gtk' >> /etc/portage/package.use/redshift
 
 echo "script para instalação do redshift"
 
