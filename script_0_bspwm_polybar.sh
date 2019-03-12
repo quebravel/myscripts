@@ -32,6 +32,9 @@ $t1
 
 sudo emerge x11-wm/bspwm x11-misc/{sxhkd,polybar} 
 
+# para redimencionar a janela com o teclado [super + alt + h j k l]
+#sudo emerge x11-misc/xdo
+
 $t1
 
 echo -e "\033[41;1;37m>>>\033[0m BSPWM, POLYBAR e SXHKD instalados"
