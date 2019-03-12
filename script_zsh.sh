@@ -48,6 +48,18 @@ echo 'eval $(dircolors -b $HOME/.dircolors)' >> $HOME/.zshrc
 
 $t1
 
+echo '
+export EDITOR="vim"
+export TERMINAL="urxvt"
+export BROWSER="firefox-bin"
+export READER="zathura"
+alias la="ls -la --group-directories-first"
+alias ls="ls --color=auto --group-directories-first"
+' >> $HOME/.zshrc
+
+
+$t1
+
 . $HOME/.zshrc
 
 $t1
