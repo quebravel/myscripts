@@ -6,11 +6,11 @@ echo -e "\033[41;1;37m>>>\033[0m intalar/configurar fontes"
 
 $t1
 
-euse -E infinality xft
+sudo euse -E infinality xft
 
 $t1
 
-emerge media-fonts/{droid,dejavu,fantasque-sans-mono,fontawesome,unifont,powerline-symbols} media-libs/{fontconfig-infinality,fontconfig}
+sudo emerge media-fonts/{droid,dejavu,fantasque-sans-mono,fontawesome,unifont,powerline-symbols} media-libs/{fontconfig-infinality,fontconfig}
 
 # não instalar powerline manualmente instalar pelo pacote da distribuição.
 
@@ -26,7 +26,7 @@ sh fonts/install.sh
 
 $t1
 
-: '
+: ' comentario
 
 emerge -qn dev-python/pip
 
@@ -69,14 +69,14 @@ xset fp rehash
 
 $t1
 
-eselect fontconfig enable 11-lcdfilter-default.conf 10-powerline-symbols.conf 70-yes-bitmaps.conf 52-infinality.conf
+sudo eselect fontconfig enable 11-lcdfilter-default.conf 10-powerline-symbols.conf 70-yes-bitmaps.conf 52-infinality.conf
 
 $t1
 
-eselect lcdfilter set default
+sudo select lcdfilter set default
 
 $t1
 
-eselect infinality set infinality
+sudo eselect infinality set infinality
 
 echo -e "\033[41;1;37m>>>\033[0m configuracao de fontes finalizada"
