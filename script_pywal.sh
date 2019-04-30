@@ -26,7 +26,11 @@ echo 'export PATH="${PATH}:${HOME}/.local/bin/"}' >> ~/.zshrc
 
 $t1
 
-echo 'cat ~/.cache/wal/sequences' >> ~/.zshrc
+#echo 'cat ~/.cache/wal/sequences' >> ~/.zshrc
+echo 'wal-tile() {
+     wal -n -i "$@"
+     feh --bg-tile "$(< "${HOME}/.cache/wal/wal")"
+}' >> ~/.zshrc
 
 $t1
 
