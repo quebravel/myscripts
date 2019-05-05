@@ -26,8 +26,6 @@ sh fonts/install.sh
 
 $t1
 
-: ' comentario
-
 emerge -qn dev-python/pip
 
 $t1
@@ -53,7 +51,12 @@ mv PowerlineSymbols.otf ~/.local/share/fonts/
 $t1
 
 mv 10-powerline-symbols.conf /etc/fonts/conf.d/
-'
+
+$t1
+
+echo '. /home/jonatas/.local/lib/python3.6/site-packages/powerline/bindings/zsh' >> ~/.zshrc
+
+$t1
 
 git clone https://github.com/Tecate/bitmap-fonts.git ~/.local/share/fonts/bitmap-fonts
 
