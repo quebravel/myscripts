@@ -22,7 +22,11 @@ rm zandronum3.0-linux-x86_64.tar.bz2
 
 sleep 1
 
-wget http://doomgod.com/wads/iwads/doom2.7z
+wget https://github.com/dgeng/iwad/blob/master/doom2.7z?raw=true
+
+sleep 1
+
+mv doom2.7z\?ram=true doom2.7z
 
 sleep 1
 
