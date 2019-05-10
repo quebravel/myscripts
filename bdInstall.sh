@@ -36,12 +36,13 @@ wget -P ~/.zandronum http://static.exciter.allfearthesentinel.net/wads/bd21test-
 
 sleep 1
 
-#wget -P ~/.zandronum/DOOM_Music.rar https://www.moddb.com/downloads/mirror/119007/102/e65c50bbdc9fb47a1c329d666f23081e/?referer=https%3A%2F%2Fwww.moddb.com%2Fmods%2Fdoom-custom-music-pack-by-fix-03er
-
+wget -P ~/.zandronum/ https://www.moddb.com/downloads/mirror/132302/115/3fc469e50341b345f227957b09fd4fa3/?referer=https%3A%2F%2Fwww.moddb.com%2Fsearch%3Fq%3Dbrutal%2Bdoom%2Bmusic%26sa.x%3D0%26sa.y%3D0
 sleep 1
+
+mv index* sound.wad
 
 #unzip DOOM_Music.rar
 
 echo concluido
 
-echo execulte com ./zandronum -iwad doom2.wad -file bd21testfeb24.pk3 -file DoomMetalVol4.wad
+echo execulte com ./zandronum -iwad doom2.wad -file bd21testfeb24.pk3 -file sound.wad
