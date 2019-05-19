@@ -2,7 +2,7 @@
 
 echo 'DOWNLOAD DMENU2'
 
-if ! wget https://bitbucket.org/melek/dmenu2/downloads/dmenu2-0.2.tar.gz ~/
+if ! wget https://bitbucket.org/melek/dmenu2/downloads/dmenu2-0.2.tar.gz ~/Downloads
 then
 echo 'ERRO não foi possivel baixar dmenu2 verifique sua internet.'
 exit 1
@@ -11,21 +11,24 @@ echo -e '\033[01;34mDmenu2 baixado!\033[0m'
 
 sleep 1
 
-cd ~/
+cd ~/Downloads
 
 echo 'DESCOMPACTANDO PACOTE'
 
-tar -zxf dmenu2-0.2.tar.gz
+tar xfz dmenu2-0.2.tar.gz
 
 sleep 1
 
-cd dmenu2-0.2
+cd ~/Downloads/dmenu2-0.2
 
 sleep 1
 
 echo 'COMPILANDO DMENU2'
 
-sudo make clean install
+## instalar tambem um executável
+# sudo make clean install
+## não instala o executável
+sudo make
 
 echo -e '\033[01;34mDmenu2 copilado/instalando!\033[0m'
 
