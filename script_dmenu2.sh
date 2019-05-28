@@ -25,10 +25,8 @@ sleep 1
 
 echo 'COMPILANDO DMENU2'
 
-## instalar tambem um executável
-# sudo make clean install
-## não instala o executável
-sudo make
+## instalar
+sudo make clean install
 
 echo -e '\033[01;34mDmenu2 copilado/instalando!\033[0m'
 
