@@ -2,12 +2,16 @@
 
 echo 'DOWNLOAD DMENU2'
 
-if ! wget https://bitbucket.org/melek/dmenu2/downloads/dmenu2-0.2.tar.gz ~/Downloads
+if ! wget https://bitbucket.org/melek/dmenu2/downloads/dmenu2-0.2.tar.gz
 then
 echo 'ERRO não foi possivel baixar dmenu2 verifique sua internet.'
 exit 1
 fi
 echo -e '\033[01;34mDmenu2 baixado!\033[0m'
+
+sleep 1
+
+mkdir ~/Downloads && mv dmenu2-0.2.tar.gz ~/Downloads
 
 sleep 1
 
