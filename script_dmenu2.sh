@@ -11,7 +11,7 @@ echo -e '\033[01;34mDmenu2 baixado!\033[0m'
 
 sleep 1
 
-mkdir ~/Downloads && mv dmenu2-0.2.tar.gz ~/Downloads
+mkdir ~/Downloads; mv dmenu2-0.2.tar.gz ~/Downloads
 
 sleep 1
 
