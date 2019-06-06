@@ -26,23 +26,11 @@ git clone https://github.com/quebravel/dotfiles-conf.git
 
 $t1
 
-cd ~/dotfiles-conf/.config
+cp -rv ~/dotfiles-conf/dunst ~/dotfiles-conf/mpd ~/dotfiles-conf/ncmpcpp ~/.config
 
 $t1
 
-cp -rv dunst ~/.config
-
-$t1
-
-cd ~/dotfiles-conf/
-
-$t1
-
-cp -rv .mpd .mcmpcpp ~/
-
-$t1
-
-touch ~/.mpd/socket
+touch ~/.config/mpd/socket
 
 $t1
 
@@ -74,6 +62,13 @@ sudo rc-update add mpd default
 
 $t1
 
-echo 'dunst &' >> ~/.xinitrc
+export MPD_HOST=$HOME/.config/mpd/socket
+mpd
+
+$t1
+
+echo 'dunst &\nexport MPD_HOST=$HOME/.config/mpd/socket\nmpd --kill;mpd &' >> ~/.xinitrc
+
+echo 'Use esses comando para iniciar ou parar se \nrc-service mpd stop\nrc-service mpd start'
 
 echo -e "\033[41;1;37m>>>\033[0m Pronto!"
