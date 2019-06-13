@@ -58,13 +58,17 @@ echo '. /home/jonatas/.local/lib/python3.6/site-packages/powerline/bindings/zsh'
 
 $t1
 
-git clone https://github.com/Tecate/bitmap-fonts.git ~/.local/share/fonts/bitmap-fonts
+git clone https://github.com/Tecate/bitmap-fonts.git ~/.local/share/fonts/
 
 $t1
 
 fc-cache -vf ~/.local/share/fonts/
 
 $t1
+
+sudo mkfontscale ~/.local/share/fonts/ 
+
+sudo mkfontdir ~/.local/share/fonts/
 
 xset +fp ~/.local/share/fonts/
 
