@@ -11,10 +11,17 @@ echo 'BAIXE O JRE E DEIXE NA PASTA DOWNLOADS'
 $sl1
 sudo mkdir /usr/lib/jvm
 $sl1
-sudo tar zxvf jre-* -C /usr/lib/jvm
+sudo tar zxvf ~/Downloads/jre-* -C /usr/lib/jvm
 $sl1
 sudo mv /usr/lib/jvm/jre*/ /usr/lib/jvm/jre
 $sl1
 sudo ln -s /usr/lib/jvm/jre /usr/lib/jvm/java-oracle
 $sl1
+
+export JAVA_HOME=/usr/lib/jvm/java-oracle/
+export PATH=$JAVA_HOME/bin:$PATH export PATH JAVA_HOME
+export CLASSPATH=$JAVA_HOME/lib/tools.jar
+export CLASSPATH=.:$CLASSPATH
+export  JAVA_HOME  PATH  CLASSPATH
+
 echo 'Baixe o elicpse e instale, ele não precisa do JDK pois já tem o seu compilador próprio'
