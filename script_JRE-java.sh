@@ -25,3 +25,4 @@ export CLASSPATH=.:$CLASSPATH
 export  JAVA_HOME  PATH  CLASSPATH
 
 echo 'Baixe o elicpse e instale, ele não precisa do JDK pois já tem o seu compilador próprio'
+echo 'Se for rodar o programa copilado manualmente, não esqueça que ele não pode ter na primeira linha "package <pacote>;"'
