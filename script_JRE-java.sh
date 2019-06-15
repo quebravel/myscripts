@@ -1,5 +1,7 @@
 #!/usr/bin/env/ bash
 
+echo 'baixe o java manualmente em: https://www.java.com/pt_BR/download/manual.jsp'
+
 sl1=sleep 1
 
  echo 'export JAVA_HOME=/usr/lib/jvm/java-oracle/\nexport PATH=$JAVA_HOME/bin:$PATH export PATH JAVA_HOME\nexport CLASSPATH=$JAVA_HOME/lib/tools.jar\nexport CLASSPATH=.:$CLASSPATH\nexport JAVA_HOME  PATH  CLASSPATH' >> ~/.zprofile
