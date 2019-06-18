@@ -31,17 +31,23 @@ Void(){
 
 sudo xbps-install -S zsh zsh-{autosuggestions,completions,syntax-highlighting}
 
+echo "-> -> -> -> -> -> ESCREVA O NOME DO USUÁRIO <- <- <- <- <- <-"
 
+read opcao
+
+chsh --shell /bin/zsh $opcao
+
+sudo chsh --shell /bin/zsh root
 
 }
 
 Gentoo(){
 
-emerge -auDN @world
+sudo emerge -auDN @world
 
 $t1
 
-emerge -q app-shells/{zsh,zsh-completions,gentoo-zsh-completions}
+sudo emerge -q app-shells/{zsh,zsh-completions,gentoo-zsh-completions}
 
 $t1
 
@@ -53,7 +59,7 @@ chsh -s /bin/zsh $opcao
 
 $t1
 
-chsh -s /bin/zsh
+sudo chsh -s /bin/zsh root
 
 
 }
