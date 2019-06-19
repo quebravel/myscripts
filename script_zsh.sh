@@ -2,10 +2,7 @@
 
 t1=sleep 0.5
 
-echo -e "\033[41;1;37m>>>\033[0m instalando/configurando zsh/oh-my-zsh"
-
 $t1
-
 
 Menu(){
 
@@ -25,7 +22,6 @@ Menu(){
     esac
 
 }
-
 
 Void(){
 
@@ -61,7 +57,6 @@ $t1
 
 sudo chsh -s /bin/zsh root
 
-
 }
 
 Menu
@@ -73,7 +68,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 sudo cp -r $HOME/{.zshrc,.oh-my-zsh} /root/
 
 $t1
-
 
 sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="af-magic"/g' $HOME/.zshrc
 
@@ -95,14 +89,16 @@ export READER="zathura"
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ' >> $HOME/.zshrc
 
-
 $t1
 
 . $HOME/.zshrc
 
 $t1
 
-
 sudo sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="nanotech"/g' /root/.zshrc
+
+$t1
+
+sudo sed -i 's\export ZSH="/home/jonatas/.oh-my-zsh"\export ZSH="/root/.oh-my-zsh"\' /root/.zshrc
 
 echo -e "\033[41;1;37m>>>\033[0m zsh/oh-my-zsh finalizado"
