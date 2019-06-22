@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# sh -c "$(wget -O- https://raw.githubusercontent.com/quebravel/myscripts/master/script_dmenu2.sh)"
+
 echo 'DOWNLOAD DMENU2'
 
 if ! wget https://bitbucket.org/melek/dmenu2/downloads/dmenu2-0.2.tar.gz
