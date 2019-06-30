@@ -54,7 +54,7 @@ rm -r dmenu2-0.2 dmenu2-0.2.tar.gz
 
 #chmod +x ~/Downloads/dmenu2-0.2/dmen.sh
 
-# em ~/.config/sxhkd/sxhkdrc muder o 'super + r' para lançar o 'dmen'
+# em ~/.config/sxhkd/sxhkdrc muder o 'super + r' para lançar o '~/Downloads/dmenu2-0.2/dmen.sh'
 
 echo -e '\033[01;34mPasta do dmenu2 removida!\033[0m'
 
