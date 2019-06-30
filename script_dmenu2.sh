@@ -50,7 +50,7 @@ rm -r dmenu2-0.2 dmenu2-0.2.tar.gz
 
 #echo '. "${HOME}/.cache/wal/colors.sh"' | tee >> ~/.zshrc
 
-#echo '#!/bin/env bash\n\n# Import the colors\n\n. "${HOME}/.cache/wal/colors.sh"\n\n~/Downloads/dmenu2-0.2/dmenu_run -h 17 -y 22 -nb "$color0" -nf "$color15" -sb "$color1" -sf "$color15" -fn "ohsnap" -p "dmenu2"' | tee ~/Downloads/dmenu2-0.2/dmen.sh
+#echo '#!/bin/env bash\n\n# Import the colors\n\n. "${HOME}/.cache/wal/colors.sh"\n\n~/Downloads/dmenu2-0.2/dmenu_run -h 17 -y 22 -nb "$color0" -nf "$color4" -sb "$color4" -sf "$color0" -fn "ohsnap" -p "dmenu2"' | tee ~/Downloads/dmenu2-0.2/dmen.sh
 
 #chmod +x ~/Downloads/dmenu2-0.2/dmen.sh
 
