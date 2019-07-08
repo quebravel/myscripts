@@ -4,7 +4,7 @@ sudo xbps-install -S pywal
 
 sleep 1
 
-echo "cat ~/.cache/wal/sequences\nsource ~/.cache/wal/colors-tty.sh" >> $HOME/.zshrc
+echo "cat ~/.cache/wal/sequences\nsource ~/.cache/wal/colors-tty.sh\n. "${HOME}/.cache/wal/colors.sh"" >> $HOME/.zshrc
 
 sleep 1
 
