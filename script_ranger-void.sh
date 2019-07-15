@@ -44,5 +44,9 @@ sed -i '116s/#//' ~/.config/ranger/scope.sh
 
 sleep 1
 
+sed -i '450i map uD shell -p sudo umount -Rf /mnt; lsblk' ~/.config/ranger/rc.conf
+
+sleep 1
+
 ranger --version
 
