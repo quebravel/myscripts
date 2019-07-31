@@ -53,10 +53,6 @@ read opcao
 
 chsh -s /bin/zsh $opcao
 
-$t1
-
-sudo chsh -s /bin/zsh root
-
 }
 
 Menu
@@ -64,8 +60,6 @@ Menu
 $t1
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-sudo cp -r $HOME/{.zshrc,.oh-my-zsh} /root/
 
 $t1
 
@@ -94,11 +88,5 @@ $t1
 . $HOME/.zshrc
 
 $t1
-
-sudo sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="nanotech"/g' /root/.zshrc
-
-$t1
-
-sudo sed -i 's\export ZSH="/home/jonatas/.oh-my-zsh"\export ZSH="/root/.oh-my-zsh"\' /root/.zshrc
 
 echo -e "\033[41;1;37m>>>\033[0m zsh/oh-my-zsh finalizado"
