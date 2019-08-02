@@ -146,7 +146,15 @@ sed -i '116s/#//' ~/.config/ranger/scope.sh
 
 sleep 1
 
-sed -i '450i map uD shell -p sudo umount -Rf /mnt; lsblk' ~/.config/ranger/rc.conf
+sed -i '450i map mD shell -p ~/mounta.sh -m; lsblk' ~/.config/ranger/rc.conf
+
+sleep 1
+
+sed -i '451i map uD shell -p ~/mounta.sh -d; lsblk' ~/.config/ranger/rc.conf
+
+sleep 1
+
+wget https://github.com/quebravel/myscripts/raw/master/mounta.sh -P ~/.config/ranger/
 
 sleep 1
 
