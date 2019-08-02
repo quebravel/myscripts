@@ -14,7 +14,7 @@ mounta(){
 }
 
 Desmounta(){
-    sudo umount -R /mnt
+    sudo umount -Rf /mnt
 }
 
 escolha(){
