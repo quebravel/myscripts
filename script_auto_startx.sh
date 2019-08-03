@@ -1,8 +1,17 @@
 #!/bin/bash
 
-t1=sleep 0.5
+t1="sleep 1"
 
-rm -r ~/.log
+
+if ! rm -f ~/.zprofile
+then
+    echo -e ">>> .zprofile ok..."
+fi
+
+if ! rm -fr ~/.log
+then
+    echo -e ">>> .log ok..."
+fi
 
 $t1
 
@@ -14,9 +23,13 @@ touch ~/.log/xsession-errors
 
 $t1
 
-cp /etc/zsh/zprofile ~/.zprofile
 
-$t1
+# if ! cp -f /etc/zsh/zprofile ~/.zprofile
+# then
+    # echo -e ">>> nao existe zprofile, vou cria-lo..."
+# fi
+
+# $t1
 
 echo '# Auto startx depending on the tty
 if [[ -z $DISPLAY ]] && (( $EUID != 0 )) {
