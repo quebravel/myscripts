@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 usage(){
     echo "user:
     -c              Cliente.
@@ -33,7 +32,14 @@ fi
 # --- Saida ---
 if [[ ! -z $cliente && ! -z $vencimento && ! -z $valor_dinheiro ]]
 then
-echo "*[Aviso Automático]* Bom dia, *${cliente}*. Consta em nosso sistema fatura(s) em aberto do dia *${vencimento}* no valor de *R\$* *${valor_dinheiro}*. Podemos negociar o pagamento aqui no *WhatsApp*! Responda esta mensagem para nós enviamos o(s) boleto(s) atualizado(s). Por favor pague para evitar que o seu boleto entre em protesto. Caso o pagamento tenha sido efetuado, desconsidere esta mensagem."
+echo "*[Aviso Automático]* Bom dia, *${cliente}*. Consta em nosso sistema fatura(s) em aberto do dia *${vencimento}* no valor de *R\$* *${valor_dinheiro}*. Podemos negociar o pagamento aqui no *WhatsApp*! Responda esta mensagem para nós enviamos o(s) boleto(s) atualizado(s). Por favor pague para evitar que o seu boleto entre em protesto. Caso o pagamento tenha sido efetuado, desconsidere esta mensagem." > ~/msg.txt
 else
     usage
 fi
+
+
+# --- Envio por e-mail ---
+# sudo xbps-install -S neomutt cyrus-sasl cyrus-sasl-modules cyrus-sasl-modules-gssapi
+# git clone dotfiles | neomutt
+cat ~/msg.txt | neomutt -s "Frase WhatsApp cobrança" <EMAIL>@outlook.com
+cat ~/msg.txt
