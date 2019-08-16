@@ -25,8 +25,8 @@ Menu(){
 
 Void(){
 
-sudo xbps-install -S zsh zsh-{autosuggestions,completions,syntax-highlighting}
-
+sudo xbps-install -S zsh zsh-{autosuggestions,completions}
+#,syntax-highlighting
 echo "-> -> -> -> -> -> ESCREVA O NOME DO USUÁRIO <- <- <- <- <- <-"
 
 read opcao
@@ -80,7 +80,7 @@ export EDITOR="vim"
 export TERMINAL="urxvt"
 export BROWSER="firefox"
 export READER="zathura"
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ' >> $HOME/.zshrc
 
 $t1
