@@ -146,11 +146,11 @@ sed -i '116s/#//' ~/.config/ranger/scope.sh
 
 sleep 1
 
-sed -i '450i map mD shell -p ~/mounta.sh -m; lsblk' ~/.config/ranger/rc.conf
+sed -i '450i map mD shell -p ~/.config/ranger/mounta.sh -m; lsblk' ~/.config/ranger/rc.conf
 
 sleep 1
 
-sed -i '451i map uD shell -p ~/mounta.sh -d; lsblk' ~/.config/ranger/rc.conf
+sed -i '451i map uD shell -p ~/.config/ranger/mounta.sh -d; lsblk' ~/.config/ranger/rc.conf
 
 sleep 1
 
