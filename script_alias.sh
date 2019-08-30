@@ -13,6 +13,7 @@ export BROWSER="firefox"
 export READER="zathura"
 alias n="nvim"
 alias v="vim"
+alias cat="cat -n"
 
 # power | /etc/sudoers | %<usuário> <hostname> =NOPASSWD: /usr/bin/shutdown
 alias shutdown -h now="sudo shutdown -h now"
