@@ -81,6 +81,7 @@ export TERMINAL="urxvt"
 export BROWSER="firefox"
 export READER="zathura"
 #source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+alias cat="cat -n"
 ' >> $HOME/.zshrc
 
 $t1
