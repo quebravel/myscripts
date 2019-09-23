@@ -65,7 +65,7 @@ cd ~/
 
 $t1
 
-mkdir Documentos Música Vídeo
+mkdir Documentos Música Vídeos
 
 $t1
 
