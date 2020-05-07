@@ -112,7 +112,7 @@ mkdir ~/.config/ncmpcpp
 
 $t1
 
-mkdir ~/Música
+mkdir ~/Músicas
 
 $t1
 
