@@ -99,16 +99,19 @@ alias xi="sudo xbps-install -S"
 alias xiu="sudo xbps-install -Su"
 alias xr="sudo xbps-remove -R"
 alias xq="xbps-query -Rs"
+alias xo="sudo xbps-remove -Oo"
 
 alias ip="ip -s -c -h a"
 
 # lsd
-#alias ls='lsd'
-#alias l='ls -l'
-#alias la='ls -a'
-#alias lla='ls -la'
-#alias lt='ls --tree'
+alias ls="lsd --icon never"
+alias l="lsd -l --icon never"
+alias la="lsd -a --icon never"
+alias lla="lsd -la --icon never"
+alias lt="lsd --tree --icon never"
+alias ll="lsd -l --icon never --total-size"
 ' >> $HOME/.zshrc
+
 
 }
 
