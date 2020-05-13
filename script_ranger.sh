@@ -154,7 +154,15 @@ sed -i '451i map uD shell -p ~/.config/ranger/mounta.sh -d; lsblk' ~/.config/ran
 
 sleep 1
 
-wget https://github.com/quebravel/myscripts/raw/master/mounta.sh -P ~/.config/ranger/
+sed -i '452i map ff fzf_select' ~/.config/ranger/rc.conf
+
+sleep 1
+
+wget https://github.com/quebravel/myscripts/raw/master/mounta.sh && cat mounta.sh >> teste && rm mounta.s
+
+sleep 1
+
+cat ~/myscripts/script_ranger_fzf >> ~/.config/ranger/commands.py
 
 sleep 1
 
