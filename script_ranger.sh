@@ -158,11 +158,11 @@ sed -i '452i map ff fzf_select' ~/.config/ranger/rc.conf
 
 sleep 1
 
-wget https://github.com/quebravel/myscripts/raw/master/mounta.sh && cat mounta.sh >> teste && rm mounta.s
+wget https://github.com/quebravel/myscripts/raw/master/mounta.sh -P ~/.config/ranger/
 
 sleep 1
 
-cat ~/myscripts/script_ranger_fzf >> ~/.config/ranger/commands.py
+wget https://raw.githubusercontent.com/quebravel/myscripts/master/script_ranger_fzf && cat script_ranger_fzf >> ~/.config/ranger/commands.py && rm script_ranger_fzf
 
 sleep 1
 
