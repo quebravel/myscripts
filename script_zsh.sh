@@ -37,6 +37,13 @@ sudo chsh --shell /bin/zsh root
 
 echo '
 
+export EDITOR="nvim"
+export TERMINAL="urxvt"
+export BROWSER="firefox"
+export READER="zathura"
+export SHELL="zsh"
+export XDG_CURRENT_DESKTOP="bspwm"
+
 ### luke smith vi mode
 
 # Basic auto/tab complete:
@@ -110,6 +117,20 @@ alias la="lsd -a --icon never"
 alias lla="lsd -la --icon never"
 alias lt="lsd --tree --icon never"
 alias ll="lsd -l --icon never --total-size"
+
+#fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# cda - including hidden directories
+cda() {
+  local dir
+  dir=$(find ${1:-.} -type d 2> /dev/null | fzf +m) && cd "$dir"
+}
+# na - including hidden directories
+na() {
+  local dir
+  fil=$(find ${1:-.} -type f 2> /dev/null | fzf +m) && nvim "$fil"
+}
+
 ' >> $HOME/.zshrc
 
 
