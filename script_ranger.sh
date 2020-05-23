@@ -118,6 +118,10 @@ sed -i 's/set draw_borders none/set draw_borders both/g' ~/.config/ranger/rc.con
 
 sleep 1
 
+sed -i 's/set sort natural/set sort ctime/g' ~/.config/ranger/rc.conf
+
+sleep 1
+
 sed -i 's/mime ^audio|ogg$, terminal, has mplayer  = mplayer -- "$@"/mime ^audio|ogg$, terminal, has moc      = ncmpcpp -- "$@"/g' ~/.config/ranger/rifle.conf
 
 sleep 1
