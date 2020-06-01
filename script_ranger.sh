@@ -102,7 +102,12 @@ echo -e "\033[41;1;37m>>>\033[0m ranger file manager finalizado"
 
 void(){
 
-sudo xbps-install -S ranger zathura-pdf-poppler w3m-img ffmpegthumbnailer
+sudo xbps-install -S ranger zathura-pdf-poppler w3m-img ffmpegthumbnailer mlocate
+
+sleep 1
+
+# Instalar mlocate e executar updatedb para poder usar fzf com procurar de arquivos ocultos no ranger
+sudo updatedb
 
 sleep 1
 
@@ -163,6 +168,9 @@ sed -i '452i map ff fzf_select' ~/.config/ranger/rc.conf
 sleep 1
 
 sed -i '453i map fl fzf_locate' ~/.config/ranger/rc.conf
+
+sleep 1
+
 
 sleep 1
 
