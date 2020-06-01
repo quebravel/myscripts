@@ -162,6 +162,10 @@ sed -i '452i map ff fzf_select' ~/.config/ranger/rc.conf
 
 sleep 1
 
+sed -i '453i map fl fzf_locate' ~/.config/ranger/rc.conf
+
+sleep 1
+
 wget https://github.com/quebravel/myscripts/raw/master/mounta.sh -P ~/.config/ranger/
 
 sleep 1
