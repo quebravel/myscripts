@@ -111,12 +111,12 @@ alias xo="sudo xbps-remove -Oo"
 alias ip="ip -s -c -h a"
 
 # lsd
-alias ls="lsd -t --icon never"
-alias l="lsd -lt --icon never"
-alias la="lsd -at --icon never"
-alias lla="lsd -lat --icon never"
-alias lt="lsd --tree --icon never"
-alias ll="lsd -lt --icon never --total-size"
+alias ls='lsd -tS --icon never'
+alias l='lsd -ltS --icon never'
+alias la='lsd -atS --icon never'
+alias lla='lsd -lSah --icon never'
+alias lt='lsd --tree --icon never'
+alias ll='lsd -lS --icon never --total-size'
 
 #fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
