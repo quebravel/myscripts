@@ -147,6 +147,10 @@ sed -i '157,160s/#//' ~/.config/ranger/scope.sh
 
 sleep 1
 
+sed -i 's/#set preview_script ~\/.config\/ranger\/scope.sh/set preview_script ~\/.config\/ranger\/scope.sh/g' ~/.config/ranger/rc.conf
+
+sleep 1
+
 sed -i '450i map mD shell -p ~/.config/ranger/mounta.sh -m; lsblk' ~/.config/ranger/rc.conf
 
 sleep 1
