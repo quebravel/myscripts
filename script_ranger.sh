@@ -139,19 +139,11 @@ sed -i 's/label wallpaper, number 14, mime ^image, has feh, X = feh --bg-fill "$
 
 sleep 1
 
-sed -i '113s/#//' ~/.config/ranger/scope.sh
+sed -i '113,116s/#//' ~/.config/ranger/scope.sh
 
 sleep 1
 
-sed -i '114s/#//' ~/.config/ranger/scope.sh
-
-sleep 1
-
-sed -i '115s/#//' ~/.config/ranger/scope.sh
-
-sleep 1
-
-sed -i '116s/#//' ~/.config/ranger/scope.sh
+sed -i '157,160s/#//' ~/.config/ranger/scope.sh
 
 sleep 1
 
