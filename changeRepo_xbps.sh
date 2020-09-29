@@ -12,21 +12,21 @@ EUFinland(){
 }
 
 USAChicago(){
-    sudo sed -i 's|https://alpha.de.repo.voidlinux.org|https://mirrors.servercentral.com/voidlinux/|g' /etc/xbps.d/*-repository-*.conf
+    sudo sed -i 's|https://alpha.de.repo.voidlinux.org|https://mirrors.servercentral.com/voidlinux|g' /etc/xbps.d/*-repository-*.conf
 
     sudo xbps-install -S && sudo xbps-query -L
 
 }
 
 USAKansasCity(){
-    sudo sed -i 's|https://alpha.de.repo.voidlinux.org|https://alpha.us.repo.voidlinux.org/|g' /etc/xbps.d/*-repository-*.conf
+    sudo sed -i 's|https://alpha.de.repo.voidlinux.org|https://alpha.us.repo.voidlinux.org|g' /etc/xbps.d/*-repository-*.conf
 
     sudo xbps-install -S && sudo xbps-query -L
 
 }
 
 USANewYork(){
-    sudo sed -i 's|https://alpha.de.repo.voidlinux.org|https://mirror.clarkson.edu/voidlinux/|g' /etc/xbps.d/*-repository-*.conf
+    sudo sed -i 's|https://alpha.de.repo.voidlinux.org|https://mirror.clarkson.edu/voidlinux|g' /etc/xbps.d/*-repository-*.conf
 
     sudo xbps-install -S && sudo xbps-query -L
 
