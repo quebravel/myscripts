@@ -1,8 +1,13 @@
 Sub filtroGeral()
+
+'
+' abrirTitulosPagos Macro
+'
+    ChDir "C:\Users\Jonatas\Documents\COMPARTILHAR"
+    Workbooks.OpenXML Filename:= _
+        "C:\Users\Jonatas\Documents\COMPARTILHAR\TitulosPagos.csv"
 '
 ' filtroGeral Macro
-'
-
 '
     ultimaLinha = WorksheetFunction.CountA(Columns("C"))
     
