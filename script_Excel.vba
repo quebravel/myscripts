@@ -1,0 +1,115 @@
+Sub filtroGeral()
+
+'
+' abrirTitulosPagos Macro
+'
+    ChDir "C:\Users\Jonatas\Documents\COMPARTILHAR"
+    Workbooks.OpenXML Filename:= _
+        "C:\Users\Jonatas\Documents\COMPARTILHAR\TitulosPagos.csv"
+'
+' filtroGeral Macro
+'
+    ultimaLinha = WorksheetFunction.CountA(Columns("C"))
+    
+    Columns("C:C").Select
+    Selection.Delete Shift:=xlToLeft
+    Columns("G:H").Select
+    Selection.Delete Shift:=xlToLeft
+    Columns("D:D").Select
+    Selection.Delete Shift:=xlToLeft
+    Columns("E:E").Select
+    Selection.Cut
+    Selection.End(xlToLeft).Select
+    Columns("A:A").Select
+    Selection.Insert Shift:=xlToRight
+    Columns("B:B").Select
+    Selection.Insert Shift:=xlToRight
+    Range("B1").Select
+    Selection.FillRight
+    Range("B2").Select
+    ActiveCell.FormulaR1C1 = "=CONCATENATE(""VE"",RC[-1])"
+    Range("B2").Select
+    Selection.AutoFill Destination:=Range("B2:B" & ultimaLinha)
+    Range("B1").Select
+    Workbooks.Open Filename:="C:\Users\Jonatas\Documents\Report.xlsx"
+    Columns("A:B").Select
+    Selection.Delete Shift:=xlToLeft
+    Columns("D:E").Select
+    Selection.Delete Shift:=xlToLeft
+    Columns("E:H").Select
+    Selection.Delete Shift:=xlToLeft
+    Columns("D:D").Select
+    Selection.Cut
+    Columns("C:C").Select
+    Selection.Insert Shift:=xlToRight
+    Columns("B:B").Select
+    Selection.Cut
+    Selection.End(xlToLeft).Select
+    Columns("A:A").Select
+    Selection.Insert Shift:=xlToRight
+    Rows("1:1").Select
+    Selection.Insert Shift:=xlDown
+    Range("A1").Select
+    ActiveWindow.ActivateNext
+    Range("B1:F1").Select
+    Selection.Copy
+    ActiveWindow.ActivateNext
+    ActiveWindow.ActivateNext
+    ActiveSheet.Paste
+    
+    ultimaLinhaReport = WorksheetFunction.CountA(Columns("C"))
+    
+    Range("A1:E" & ultimaLinhaReport).Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    ActiveWindow.ActivateNext
+    Range("B2").Select
+    Sheets.Add
+    ActiveSheet.Paste
+    Sheets("TitulosPagos").Select
+    Sheets("TitulosPagos").Name = "tpagos"
+    Sheets("Planilha1").Select
+    Range("B1").Select
+    Selection.End(xlToRight).Select
+    Range("E2").Select
+    Application.CutCopyMode = False
+    ActiveCell.FormulaR1C1 = "=VLOOKUP(RC[-4],tpagos!C[-3]:C[1],5,0)"
+    Range(Selection, ActiveCell.SpecialCells(xlLastCell)).Select
+    Selection.FillDown
+    Selection.End(xlUp).Select
+    Range(Selection, Selection.End(xlToLeft)).Select
+    Selection.Font.Italic = True
+    Range("E2").Select
+    Range(Selection, Selection.End(xlDown)).Select
+    Selection.Font.Bold = True
+    Range("E1").Select
+    
+    ' Filtro números em #N/D
+    
+    Selection.AutoFilter
+    ActiveSheet.Range("E2").AutoFilter Field:=5, Criteria1:=">1"
+       
+    
+    '
+    ' Formatando
+    '
+    Range("E1").Select
+    Selection.End(xlToLeft).Select
+    Range(Selection, Selection.End(xlToRight)).Select
+    Range("A2:D2").Select
+    Range(Selection, Selection.End(xlDown)).Select
+    Selection.Font.Size = 8
+    Cells.Select
+    Cells.EntireColumn.AutoFit
+    Range("A1").Select
+        
+    '
+    ' Salvando a planilha renomeando-a em formato de data
+    '
+    DirPath = "C:\Users\Jonatas\Documents\COMPARTILHAR\"
+    DateStr = Format(Date, "yyyy-mm-d")
+    ActiveWorkbook.SaveAs Filename:= _
+        DirPath & DateStr, FileFormat:= _
+        xlOpenXMLWorkbook, CreateBackup:=False
+        
+End Sub
