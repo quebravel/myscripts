@@ -4,12 +4,15 @@ Sub ped_Moacir()
 '
 
 '
+
+    ultimaLinha = WorksheetFunction.CountA(Columns("A")) + 1
+    
     Range("B:C,F:F,H:M").Select
     Range("H1").Activate
     Selection.Delete Shift:=xlToLeft
     Range("G1").Select
     Selection.End(xlToLeft).Select
-    Range("A1:D681").Select
+    Range("A1:D" & ultimaLinha).Select
     Range("D1").Activate
     Selection.ClearFormats
     Rows("1:1").Select
@@ -40,19 +43,19 @@ Sub ped_Moacir()
     Range("D2").Select
     ActiveCell.FormulaR1C1 = "=ROUND(RC[-1]/3,0)"
     Range("D2").Select
-    Selection.AutoFill Destination:=Range("D2:D682")
-    Range("D2:D682").Select
+    Selection.AutoFill Destination:=Range("D2:D" & ultimaLinha)
+    Range("D2:D" & ultimaLinha).Select
     Range("E2").Select
     ActiveCell.FormulaR1C1 = "=IF(RC[-3]<=RC[-1],""pedir"",""ok"")"
     Range("E2").Select
-    Selection.AutoFill Destination:=Range("E2:E682")
-    Range("E2:E682").Select
+    Selection.AutoFill Destination:=Range("E2:E" & ultimaLinha)
+    Range("E2:E" & ultimaLinha).Select
     Range("H2").Select
     Application.CutCopyMode = False
     ActiveCell.FormulaR1C1 = "=RC[-2]*RC[-1]"
     Range("H2").Select
-    Selection.AutoFill Destination:=Range("H2:H682")
-    Range("H2:H682").Select
+    Selection.AutoFill Destination:=Range("H2:H" & ultimaLinha)
+    Range("H2:H" & ultimaLinha).Select
     Range("I1").Select
     ActiveCell.FormulaR1C1 = "=SUM(RC[-1]:R[999]C[-1])"
     Range("I1").Select
@@ -130,4 +133,36 @@ Sub ped_Moacir()
     Range("E1").Select
         Columns("C:C").Select
     Selection.EntireColumn.Hidden = True
+    
+    '
+    ' Congelando barra superior Macro
+    '
+
+    '
+    With ActiveWindow
+        .SplitColumn = 0
+        .SplitRow = 1
+    End With
+    ActiveWindow.FreezePanes = True
+    Range("A1").Select
+    ActiveWindow.Zoom = 240
+    Columns("A:A").EntireColumn.AutoFit
+    
+    '
+    ' Filtro Macro
+    '
+
+    '
+    Selection.AutoFilter
+    ActiveSheet.Range("E2").AutoFilter Field:=5, Criteria1:="pedir"
+    
+    '
+    ' Salvando a planilha renomeando-a em formato de data
+    '
+    DirPath = "C:\Users\Jonatas\Desktop\"
+    FornName = "Ped_BJ_"
+    DateStr = Format(Date, "yyyy-mm-dd")
+    ActiveWorkbook.SaveAs Filename:= _
+        DirPath & FornName & DateStr, FileFormat:= _
+        xlOpenXMLWorkbook, CreateBackup:=False
 End Sub
