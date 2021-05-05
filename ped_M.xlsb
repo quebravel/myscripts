@@ -1,0 +1,133 @@
+Sub ped_Moacir()
+'
+' ped_Moacir Macro
+'
+
+'
+    Range("B:C,F:F,H:M").Select
+    Range("H1").Activate
+    Selection.Delete Shift:=xlToLeft
+    Range("G1").Select
+    Selection.End(xlToLeft).Select
+    Range("A1:D681").Select
+    Range("D1").Activate
+    Selection.ClearFormats
+    Rows("1:1").Select
+    Range("C1").Activate
+    Selection.Insert Shift:=xlDown
+    Range("A1").Select
+    ActiveCell.FormulaR1C1 = "código"
+    Range("B1").Select
+    ActiveCell.FormulaR1C1 = "estoque"
+    Range("C1").Select
+    ActiveCell.FormulaR1C1 = "vendas"
+    Range("D1").Select
+    ActiveCell.FormulaR1C1 = "preço uni"
+    Range("E1").Select
+    ActiveCell.FormulaR1C1 = "total"
+    Columns("D:D").Select
+    Selection.Insert Shift:=xlToRight
+    Selection.Insert Shift:=xlToRight
+    Selection.Insert Shift:=xlToRight
+    Range("D1").Select
+    ActiveCell.FormulaR1C1 = "vendas/3"
+    Range("E1").Select
+    ActiveCell.FormulaR1C1 = "ok/pedir"
+    Range("F1").Select
+    ActiveCell.FormulaR1C1 = "quantid"
+    Range("D2").Select
+    ActiveCell.FormulaR1C1 = "=RC[-1]/3"
+    Range("D2").Select
+    ActiveCell.FormulaR1C1 = "=ROUND(RC[-1]/3,0)"
+    Range("D2").Select
+    Selection.AutoFill Destination:=Range("D2:D682")
+    Range("D2:D682").Select
+    Range("E2").Select
+    ActiveCell.FormulaR1C1 = "=IF(RC[-3]<=RC[-1],""pedir"",""ok"")"
+    Range("E2").Select
+    Selection.AutoFill Destination:=Range("E2:E682")
+    Range("E2:E682").Select
+    Range("H2").Select
+    Application.CutCopyMode = False
+    ActiveCell.FormulaR1C1 = "=RC[-2]*RC[-1]"
+    Range("H2").Select
+    Selection.AutoFill Destination:=Range("H2:H682")
+    Range("H2:H682").Select
+    Range("I1").Select
+    ActiveCell.FormulaR1C1 = "=SUM(RC[-1]:R[999]C[-1])"
+    Range("I1").Select
+    
+    '
+    ' Formatação Macro
+    '
+
+    '
+    Columns("A:A").Select
+    Selection.Style = "Bom"
+    Columns("B:B").Select
+    Selection.Style = "Neutro"
+    Columns("C:C").Select
+    Selection.Style = "Ruim"
+    Columns("D:D").Select
+    Selection.Style = "Ênfase1"
+    Columns("E:E").Select
+    Selection.Style = "Ênfase2"
+    Columns("F:F").Select
+    Selection.Style = "Ênfase4"
+    Columns("G:G").Select
+    Selection.Style = "Ênfase6"
+    Columns("H:H").Select
+    Selection.Style = "Ênfase5"
+    Range("I1").Select
+    Selection.Style = "Nota"
+    Selection.Style = "Currency"
+    Range("A1:H1").Select
+    Range(Selection, Selection.End(xlDown)).Select
+    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
+    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
+    With Selection.Borders(xlEdgeLeft)
+        .LineStyle = xlContinuous
+        .ThemeColor = 1
+        .TintAndShade = -0.249977111117893
+        .Weight = xlThin
+    End With
+    With Selection.Borders(xlEdgeTop)
+        .LineStyle = xlContinuous
+        .ThemeColor = 1
+        .TintAndShade = -0.249977111117893
+        .Weight = xlThin
+    End With
+    With Selection.Borders(xlEdgeBottom)
+        .LineStyle = xlContinuous
+        .ThemeColor = 1
+        .TintAndShade = -0.249977111117893
+        .Weight = xlThin
+    End With
+    With Selection.Borders(xlEdgeRight)
+        .LineStyle = xlContinuous
+        .ThemeColor = 1
+        .TintAndShade = -0.249977111117893
+        .Weight = xlThin
+    End With
+    With Selection.Borders(xlInsideVertical)
+        .LineStyle = xlContinuous
+        .ThemeColor = 1
+        .TintAndShade = -0.249977111117893
+        .Weight = xlThin
+    End With
+    With Selection.Borders(xlInsideHorizontal)
+        .LineStyle = xlContinuous
+        .ThemeColor = 1
+        .TintAndShade = -0.249977111117893
+        .Weight = xlThin
+    End With
+    Range("A1").Select
+    Columns("F:F").Select
+    With Selection.Font
+        .Color = -6279056
+        .TintAndShade = 0
+    End With
+    Range("E1").Select
+        Columns("C:C").Select
+    Selection.EntireColumn.Hidden = True
+End Sub
