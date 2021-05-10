@@ -17,3 +17,7 @@ start C:\Users\Jonatas\AppData\Local\WhatsApp\WhatsApp.exe
 timeout /t 20
 
 start C:\Users\Jonatas\"WebCatalog Apps"\WhatsApp\WhatsApp.exe
+
+timeout /t 10
+
+start C:\ProgramData\CatalogoBastosJuntas\CallCatalogoExpresso.exe
