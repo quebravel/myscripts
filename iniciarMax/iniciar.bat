@@ -1,16 +1,16 @@
-timeout /t 240
+timeout /t 120
 
 start C:\MAX\MAX_Manager2.exe
 
-timeout /t 60
+timeout /t 30
 
 start skype.exe
 
-timeout /t 40
+timeout /t 30
 
 start AnyDesk.exe
 
-timeout /t 50
+timeout /t 30
 
 start C:\Users\Jonatas\AppData\Local\WhatsApp\WhatsApp.exe
 
