@@ -5,7 +5,7 @@ dvpack="$HOME/void-packages"
 if [ -e $dvpack ]; then
     cd $dvpack
 else
-    git clone https://github.com/void-linux/void-packages ; cd $dvpack
+    git clone https://github.com/void-linux/void-packages $dvpack ; cd $dvpack
 fi
 
 pwd
