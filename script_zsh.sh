@@ -39,7 +39,7 @@ echo '
 
 export EDITOR="nvim"
 export TERMINAL="urxvt"
-export BROWSER="firefox"
+export BROWSER="qutebrowser"
 export READER="zathura"
 export SHELL="zsh"
 export XDG_CURRENT_DESKTOP="bspwm"
@@ -99,6 +99,7 @@ alias shutdown="sudo shutdown"
 alias npolybar="nvim ~/.config/polybar/config"
 alias nbspwm="nvim ~/.config/bspwm/bspwmrc"
 alias nsxhkd="nvim ~/.config/sxhkd/sxhkdrc"
+alias nqute="nvim ~/.config/qutebrowser/config.py"
 alias n="nvim"
 
 # xbps

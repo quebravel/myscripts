@@ -9,7 +9,7 @@ alias xq="xbps-query -Rs"
 # default programs terminal
 export EDITOR="vim"
 export TERMINAL="urxvt"
-export BROWSER="firefox"
+export BROWSER="qutebrowser"
 export READER="zathura"
 alias n="nvim"
 alias v="vim"
