@@ -31,7 +31,7 @@ Sub filtroGeral()
     Range("B2").Select
     Selection.AutoFill Destination:=Range("B2:B" & ultimaLinha)
     Range("B1").Select
-    Workbooks.Open Filename:="C:\Users\Jonatas\Documents\Report.xlsx"
+    Workbooks.Open Filename:="C:\Users\Jonatas\Documents\Report.xls"
     Columns("A:B").Select
     Selection.Delete Shift:=xlToLeft
     Columns("D:E").Select
@@ -66,9 +66,8 @@ Sub filtroGeral()
     Range("B2").Select
     Sheets.Add
     ActiveSheet.Paste
-    Sheets("TitulosPagos").Select
     Sheets("TitulosPagos").Name = "tpagos"
-    Sheets("Planilha1").Select
+    Sheets("Plan1").Select
     Range("B1").Select
     Selection.End(xlToRight).Select
     Range("E2").Select
@@ -88,6 +87,26 @@ Sub filtroGeral()
     
     Selection.AutoFilter
     ActiveSheet.Range("E2").AutoFilter Field:=5, Criteria1:=">1"
+    
+    '
+    ' Copiando para planilha2
+    '
+
+    '
+    
+    ultimaLinhaFormt = WorksheetFunction.CountA(Columns("C"))
+    
+    Sheets.Add
+    Selection.Copy
+    Sheets("Plan1").Select
+    Range("A1:E" & ultimaLinhaFormt).Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    Sheets("Plan2").Select
+    ActiveSheet.Paste
+    
+    ' Fechando report
+    Workbooks("Report.xls").Close SaveChanges:=False
        
     
     '
