@@ -104,6 +104,9 @@ Sub filtroGeral()
     Selection.Copy
     Sheets("Plan2").Select
     ActiveSheet.Paste
+    
+    ' Fechando report
+    Workbooks("Report.xls").Close SaveChanges:=False
        
     
     '
