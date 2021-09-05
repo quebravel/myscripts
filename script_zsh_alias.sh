@@ -5,11 +5,11 @@ zsh_alias(){
 
 sudo xbps-install -Sy zsh zsh-autosuggestions zsh-completions
 #,syntax-highlighting
-echo "-> -> -> -> -> -> ESCREVA O NOME DO USUÁRIO <- <- <- <- <- <-"
+echo "-> -> -> -> -> -> configurando zsh para padrao <- <- <- <- <- <-"
 
-read opcao
+nome=`users`
 
-chsh --shell /bin/zsh $opcao
+chsh --shell /bin/zsh $nome
 
 sudo chsh --shell /bin/zsh root
 
