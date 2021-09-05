@@ -4,7 +4,7 @@
 
 echo 'DOWNLOAD DMENU2'
 
-if ! git clone https://github.com/spcmd/dmenu2.git
+if ! git clone https://github.com/spcmd/dmenu2.git ~/dmenu2
 then
 echo 'ERRO não foi possivel baixar dmenu2 verifique sua internet.'
 exit 1
@@ -13,11 +13,11 @@ echo -e '\033[01;34mDmenu2 baixado!\033[0m'
 
 sleep 1
 
-mkdir ~/Downloads; mv dmenu2 ~/Downloads
+mkdir ~/Downloads; mv ~/dmenu2 ~/Downloads
 
 sleep 1
 
-cd ~/Downloads
+cd ~/Downloads/dmenu2
 
 echo 'DESCOMPACTANDO PACOTE'
 
@@ -25,7 +25,7 @@ tar xfz dmenu2-0.2.1.tar.gz
 
 sleep 1
 
-cd ~/Downloads/dmenu2-0.2.1
+cd ~/Downloads/dmenu2/dmenu2-0.2.1
 
 sleep 1
 
@@ -44,7 +44,7 @@ sleep 1
 
 echo 'REMOVENDO PASTA'
 
-rm -r dmenu2-0.2.1 dmenu2-0.2.1.tar.gz
+rm -rf ~/Downloads/dmenu2
 
 ## mudar cores com pywal
 
