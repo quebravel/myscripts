@@ -4,7 +4,6 @@
 zsh_alias(){
 
 sudo xbps-install -S zsh zsh-{autosuggestions,completions}
-sudo xbps-install -S wget
 #,syntax-highlighting
 echo "-> -> -> -> -> -> ESCREVA O NOME DO USUÁRIO <- <- <- <- <- <-"
 
