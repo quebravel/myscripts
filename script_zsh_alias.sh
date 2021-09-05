@@ -3,7 +3,7 @@
 
 zsh_alias(){
 
-sudo xbps-install -S zsh zsh-{autosuggestions,completions}
+sudo xbps-install -Sy zsh zsh-{autosuggestions,completions}
 #,syntax-highlighting
 echo "-> -> -> -> -> -> ESCREVA O NOME DO USUÁRIO <- <- <- <- <- <-"
 
