@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-zsh_alias(){
+zsh(){
 
 sudo xbps-install -Sy zsh zsh-autosuggestions zsh-completions
 #,syntax-highlighting
@@ -15,7 +15,9 @@ sudo chsh --shell /bin/zsh root
 
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-sleep 2
+}
+
+alias_z(){
 
 echo '
 
@@ -183,4 +185,10 @@ FZF-EOF"
 
 }
 
-zsh_alias
+zsh
+
+sleep 1
+
+zsh
+
+alias_z
