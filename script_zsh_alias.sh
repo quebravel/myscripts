@@ -3,8 +3,8 @@
 
 zsh(){
 
-sudo xbps-install -Sy zsh zsh-autosuggestions zsh-completions
-#,syntax-highlighting
+sudo xbps-install -Sy zsh
+
 echo "-> -> -> -> -> -> configurando zsh para padrao <- <- <- <- <- <-"
 
 nome=`users`
