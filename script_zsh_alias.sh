@@ -80,11 +80,20 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 # shutdown
 alias shutdown="sudo shutdown"
+
+# system
+alias ipa="ip -s -c -h a"
+alias s="sxiv -t *.jpg"
+alias f="feh --bg-scale"
+alias vkp="sudo vkpurge rm all"
+alias n="nvim"
+
+# atalhos
+alias nzshrc="nvim ~/.zshrc"
 alias npolybar="nvim ~/.config/polybar/config"
 alias nbspwm="nvim ~/.config/bspwm/bspwmrc"
 alias nsxhkd="nvim ~/.config/sxhkd/sxhkdrc"
 alias nqute="nvim ~/.config/qutebrowser/config.py"
-alias n="nvim"
 
 # xbps
 alias xi="sudo xbps-install -S"
@@ -92,8 +101,6 @@ alias xiu="sudo xbps-install -Su"
 alias xr="sudo xbps-remove -R"
 alias xq="xbps-query -Rs"
 alias xo="sudo xbps-remove -Oo"
-
-alias ipa="ip -s -c -h a"
 
 #DT
 ### ARCHIVE EXTRACTION
