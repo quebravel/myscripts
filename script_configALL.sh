@@ -27,3 +27,8 @@ git clone https://github.com/jmattheis/gruvbox-dark-icons-gtk ~/.icons/gruvbox-d
 
 # sudo nvim /etc/sudoers
 # jonatas ALL = NOPASSWD: /sbin/shutdown
+
+# criar diretórios padrões
+sudo xbps-install -Sy xdg-user-dirs
+xdg-user-dirs-update
+sudo xbps-remove -Rs xdg-user-dirs
