@@ -2,6 +2,6 @@
 
 sudo xbps-install -Sy nodm
 
-echo -e 'NODM_USER="${USER}"\nNODM_XSESSION="/home/${USER}/.xinitrc"' | sudo tee /etc/sv/nodm/conf
+echo -e 'NODM_USER="jonatas"\nNODM_XSESSION="/home/jonatas/.xinitrc"' | sudo tee /etc/sv/nodm/conf
 
 sudo ln -s /etc/sv/nodm /var/service
