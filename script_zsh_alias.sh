@@ -84,7 +84,7 @@ alias shutdown="sudo shutdown"
 # system
 alias ipa="ip -s -c -h a"
 alias s="sxiv -ftq *"
-alias f="feh --bg-scale"
+alias f="sxiv -frqto * | xargs feh --bg-scale"
 alias vkp="sudo vkpurge rm all"
 alias n="nvim"
 alias sz="source ~/.zshrc"
