@@ -83,7 +83,7 @@ alias shutdown="sudo shutdown"
 
 # system
 alias ipa="ip -s -c -h a"
-alias s="sxiv -ft *.jpg"
+alias s="sxiv -ftq *"
 alias f="feh --bg-scale"
 alias vkp="sudo vkpurge rm all"
 alias n="nvim"
