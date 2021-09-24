@@ -53,6 +53,8 @@ export READER="zathura"
 export SHELL="zsh"
 export XDG_CURRENT_DESKTOP="bspwm"
 
+
+[[ ! -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] || source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [[ ! -f ~/.aliaszshrc ]] || source ~/.aliaszshrc
 [[ ! -f ~/.vizshrc ]] || source ~/.vizshrc
 
