@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 
 zsh(){
@@ -35,6 +35,8 @@ sleep 1
 
 zsh
 
+
+
 echo -e "add ao .zshrc
 \n [[ ! -f ~/.aliaszshrc ]] || source ~/.aliaszshrc
 \n [[ ! -f ~/.vizshrc ]] || source ~/.vizshrc
@@ -59,6 +61,10 @@ export XDG_CURRENT_DESKTOP="bspwm"
 [[ ! -f ~/.vizshrc ]] || source ~/.vizshrc
 
 # autopair zsh
+if [[ ! -d ~/.zsh-autopair ]]; then
+  git clone https://github.com/hlissner/zsh-autopair ~/.zsh-autopair
+fi
+
 source ~/.zsh-autopair/autopair.zsh
 autopair-init
 
