@@ -5,4 +5,6 @@
 
 # first install mame-tools
 
+# obs: the format chd no rum in emulator ePSXe, only works in emulator duckstation
+
 for i in *.cue; do chdman createcd -i "$i" -o "${i%.*}.chd"; done
