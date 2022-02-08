@@ -1,0 +1,86 @@
+
+Sub nao_veio()
+'
+' Macro1 nao_veio
+' nome do arquivo do pedido que já veio é veio.xls
+
+'
+    ' "A" é a referencia da ultima linha entendeu? nao colocar na linha que vai acrescentar o codigo.
+    ultimaLinha = WorksheetFunction.CountA(Columns("A"))
+
+    Range("C1").Select
+    ActiveCell.FormulaR1C1 = "veio?"
+    Range("C2").Select
+    Sheets.Add After:=Sheets(Sheets.Count)
+    Sheets("Plan2").Select
+    Sheets("Plan2").Name = "veio"
+    ChDir "C:\Users\Jonatas\Desktop"
+    Workbooks.Open Filename:="C:\Users\Jonatas\Desktop\veio.xls"
+    Range("A:A,C:F,H:L").Select
+    Range("H1").Activate
+    Selection.Delete Shift:=xlToLeft
+    Range("C1").Select
+    ActiveCell.FormulaR1C1 = ""
+    Range("A1").Select
+    Range(Selection, Selection.End(xlToRight)).Select
+    Range(Selection, Selection.End(xlDown)).Select
+    Selection.Copy
+    Application.CutCopyMode = False
+    Selection.Copy
+    
+    'Windows("Ped_BJ_2022-01-20.xlsx").Activate
+    ActiveWindow.ActivateNext
+    
+    ActiveSheet.Paste
+    Range("A1").Select
+    Sheets("pedido").Select
+    Application.CutCopyMode = False
+    ActiveCell.FormulaR1C1 = "=VLOOKUP(RC[-2],veio!C[-2]:C[-1],2,0)"
+    
+    'ActiveCell.FormulaR1C1 = "=CONCATENATE(""VE"",RC[-1])"
+    Selection.AutoFill Destination:=Range("C2:C" & ultimaLinha)
+    
+    
+    'Range("C2:C257").Select
+    Range("C2").Select
+    
+    Selection.Copy
+    Application.CutCopyMode = False
+    Range("A2").Select
+    Range(Selection, Selection.End(xlDown)).Select
+    Selection.Copy
+    Application.CutCopyMode = False
+    Range("A1").Select
+    
+    '
+' transformando-em-numero
+'
+
+'
+    Selection.End(xlToRight).Select
+    Range("D1").Select
+    ActiveCell.FormulaR1C1 = "1"
+    Range("D1").Select
+    Selection.Copy
+    Selection.End(xlToLeft).Select
+    Range("A2").Select
+    Range(Selection, Selection.End(xlDown)).Select
+    Selection.PasteSpecial Paste:=xlPasteAll, Operation:=xlMultiply, _
+        SkipBlanks:=False, Transpose:=False
+    Sheets("veio").Select
+    Range(Selection, Selection.End(xlDown)).Select
+    Selection.PasteSpecial Paste:=xlPasteAll, Operation:=xlMultiply, _
+        SkipBlanks:=False, Transpose:=False
+    Application.CutCopyMode = False
+    Sheets("pedido").Select
+    Selection.End(xlUp).Select
+    ActiveWorkbook.Save
+    
+' transformando-em-numero FIM
+    
+    ActiveWorkbook.SaveAs Filename:= _
+        "C:\Users\Jonatas\Desktop\macro-faltasdopedido.xls", FileFormat:= _
+        xlOpenXMLWorkbookMacroEnabled, CreateBackup:=False
+End Sub
+
+
