@@ -1,23 +1,23 @@
 #!/bin/env bash
 
 
-zsh(){
-
-sudo xbps-install -Sy zsh zsh-{autosuggestions,completions}
-
-echo "-> -> -> -> -> -> configurando zsh para padrao <- <- <- <- <- <-"
-
-nome=`users`
-
-chsh --shell /bin/zsh $nome
-
-sudo chsh --shell /bin/zsh root
-
-echo "oh-my-zsh"
-
-sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-}
+# zsh(){
+#
+# sudo xbps-install -Sy zsh zsh-{autosuggestions,completions}
+#
+# echo "-> -> -> -> -> -> configurando zsh para padrao <- <- <- <- <- <-"
+#
+# nome=`users`
+#
+# chsh --shell /bin/zsh $nome
+#
+# sudo chsh --shell /bin/zsh root
+#
+# echo "oh-my-zsh"
+#
+# sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+#
+# }
 
 echo "arquivo alias"
 
@@ -26,8 +26,6 @@ wget https://raw.githubusercontent.com/quebravel/dotfiles-conf/master/.aliaszshr
 echo "arquivo de plugins"
 
 wget https://raw.githubusercontent.com/quebravel/dotfiles-conf/master/.vizshrc -P ~/
-
-}
 
 zsh
 
@@ -70,4 +68,4 @@ autopair-init
 
 ' >> $HOME/.zshrc
 
-alias_z
+# alias_z
