@@ -3,7 +3,7 @@
 # script para configurar o ly display manager
 
 # cominho do arquivo de configuração
-arquivo="$HOME/config.ini"
+arquivo="/etc/ly/config.ini"
 sd="sudo"
 
 # abilitando opções 
