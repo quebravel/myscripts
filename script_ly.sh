@@ -15,7 +15,6 @@ $sd sed -i 's/#xinitrc \= \~\/.xinitrc/xinitrc \= \~\/.xinitrc/g' $arquivo
 
 # transformando arquivo xinitrc em executavel bash
 
-[[ ! -f $HOME/.xinitrc ]] || sed -i 's/.*\#\!\/bin\/bash.*//g' $HOME/.xinitrc
+[[ ! -f $HOME/.xinitrc ]] || sed -i '/.*\#\!\/bin\/bash.*/d' $HOME/.xinitrc
 
 sed -i 1i\ "\#\!\/bin\/bash" $HOME/.xinitrc
-
