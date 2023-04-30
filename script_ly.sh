@@ -7,11 +7,11 @@ arquivo="$HOME/config.ini"
 sd="sudo"
 
 # abilitando opções 
-sed -i 's/#animate = false/animate = true/g' $arquivo
+$sd sed -i 's/#animate = false/animate = true/g' $arquivo
 
-sed -i 's/#animation = 0/animation = 1/g' $arquivo
+$sd sed -i 's/#animation = 0/animation = 1/g' $arquivo
 
-sed -i 's/#xinitrc \= \~\/.xinitrc/xinitrc \= \~\/.xinitrc/g' $arquivo
+$sd sed -i 's/#xinitrc \= \~\/.xinitrc/xinitrc \= \~\/.xinitrc/g' $arquivo
 
 # transformando arquivo xinitrc em executavel bash
 
