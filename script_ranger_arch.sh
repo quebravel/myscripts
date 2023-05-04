@@ -1,5 +1,9 @@
 #!/bin/bash
 
+[[ ! -f ~/.config/ranger/rc.conf ]] || rm  ~/.config/ranger/rc.conf
+[[ ! -f ~/.config/ranger/scope.sh ]] || rm  ~/.config/ranger/scope.sh
+[[ ! -f ~/.config/ranger/rifle.conf ]] || rm  ~/.config/ranger/rifle.conf
+
 ranger --copy-config=rc
 ranger --copy-config=scope
 ranger --copy-config=rifle
@@ -24,7 +28,6 @@ sleep 1
 
 sed -i '/label wallpaper, number 15, mime ^image, has feh, X = wal -i "$1"/d' ~/.config/ranger/rifle.conf
 
-sleep 1
 
 sed -i 's/label wallpaper, number 14, mime ^image, has feh, X = feh --bg-fill "$1"/label wallpaper, number 14, mime ^image, has feh, X = feh --bg-fill "$1"\nlabel wallpaper, number 15, mime ^image, has feh, X = wal -i "$1"/g' ~/.config/ranger/rifle.conf
 
