@@ -4,7 +4,7 @@
 
 mkdir -p ~/.srcs
 echo ""
-echo "[1] installar   [2] remover   [e] sair"
+echo "[1] instalar   [2] remover   [e] sair"
 read -r -p "Instalar ou remover dmenu2?... " dm2
 
 case $dm2 in
