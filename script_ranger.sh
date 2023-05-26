@@ -29,7 +29,7 @@ euse -E gdk-pixbuf
 
 $t1
 
-emerge app-misc/ranger
+# emerge app-misc/ranger
 
 $t1
 
@@ -65,7 +65,7 @@ cd ~/
 
 $t1
 
-mkdir Documentos Músicas Vídeos
+#mkdir Documentos Músicas Vídeos
 
 $t1
 
@@ -73,7 +73,7 @@ echo -e "\033[41;1;37m>>>\033[0m instalando o xterm para o navegador abrir a pas
 
 $t1
 
-emerge xterm
+#emerge xterm
 
 $t1
 
@@ -83,7 +83,7 @@ echo -e "\033[41;1;37m>>>\033[0m mostrar diretorio"
 
 $t1
 
-xdg-mime query default inode/directory
+#xdg-mime query default inode/directory
 
 $t1
 
@@ -91,7 +91,7 @@ echo -e "\033[41;1;37m>>>\033[0m adicionar ranger como gerenciador de arquivos p
 
 $t1
 
-xdg-mime default ranger.desktop application/x-directory
+#xdg-mime default ranger.desktop application/x-directory
 
 $t1
 
@@ -170,11 +170,11 @@ sleep 1
 
 sleep 1
 
-wget https://github.com/quebravel/myscripts/raw/master/mounta.sh -P ~/.config/ranger/
+wget https://github.com/quebravel/myscripts/raw/main/mounta.sh -P ~/.config/ranger/
 
 sleep 1
 
-wget https://raw.githubusercontent.com/quebravel/myscripts/master/script_ranger_fzf && cat script_ranger_fzf >> ~/.config/ranger/commands.py && rm script_ranger_fzf
+wget https://raw.githubusercontent.com/quebravel/myscripts/main/script_ranger_fzf && cat script_ranger_fzf >> ~/.config/ranger/commands.py && rm script_ranger_fzf
 
 sleep 1
 

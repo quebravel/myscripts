@@ -11,9 +11,12 @@ case $opcao in
    "--gentoo") gentoo ;;
    "-v") void ;;
    "--void") void ;;
+   "-a") arch ;;
+   "--arch") arch ;;
    *) echo "Opção inválida! Use uma das seguintes opcoes:
        -g,--gentoo                  Usa script para gentoo
-       -v,--void                    Usa script para void"
+       -v,--void                    Usa script para void
+       -a,--arch                    Usa script para arch"
       exit 1 ;;
 esac
 }
@@ -157,6 +160,28 @@ $t1
 echo '>>> MPD NPC NCMPCPP e DUNST INSTALADOS'
 
 echo '>>> ESPERE ALGUNS SEGUNDOS DEPOIS DE EXECUTAR O NCMPCPP PARA CARREGAR O SERVIDOR'
+
+}
+
+arch(){
+
+[[ -d ~/Músicas ]] || mkdir ~/Músicas
+
+sudo systemctl --user enable mpd.service
+
+sudo systemctl --user start mpd.service
+
+touch ~/.config/mpd/socket
+
+sed -i 's/\# export MPD_HOST\=\$HOME\/.config\/mpd\/socket/export MPD_HOST\=\$HOME\/.config\/mpd\/socket/g' $HOME/.xinitrc
+
+sed -i 's/# mpd --kill; mpd \&/mpd --kill; mpd \&/g' $HOME/.xinitrc
+
+export MPD_HOST=$HOME/.config/mpd/socket
+
+echo '>>> MPD NPC NCMPCPP INSTALADOS'
+
+echo '>>> REINICIE O SISTEMA'
 
 }
 
