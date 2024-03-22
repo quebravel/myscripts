@@ -1,0 +1,119 @@
+Sub BoletosOF07()
+    
+    '
+    ' Boletos filtro office 07 - Report.xls
+    '
+
+    Workbooks.Open Filename:="C:\Users\Jonatas\Documents\Report.xls"
+    Range("A:A,B:B,E:E,G:G,I:I,J:J,L:L").Select
+    Range("L1").Activate
+    Selection.Delete Shift:=xlToLeft
+    Range("A1").Select
+    
+    ' removendo iniciais VE dos boletos da maxdata - Report.xls
+
+    Columns("B:B").Select
+    Selection.Replace What:="VE", Replacement:="", LookAt:=xlPart, _
+        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+    Range("A1").Select
+    
+    ' abrindo - TitulosPagos.csv
+
+    ChDir "C:\Users\Jonatas\Documents\COMPARTILHAR"
+    Workbooks.OpenXML Filename:= _
+        "C:\Users\Jonatas\Documents\COMPARTILHAR\TitulosPagos.csv"
+    
+    ' deletando colunas - TitulosPagos.csv
+
+    Range("C:C,E:E,H:H,I:I").Select
+    Range("I1").Activate
+    Selection.Delete Shift:=xlToLeft
+    Selection.End(xlToLeft).Select
+    Selection.End(xlToLeft).Select
+    
+    ' sequeciando coluna - TitulosPagos.csv
+
+    Columns("A:A").Select
+    Selection.Insert Shift:=xlToRight
+    Columns("F:F").Select
+    Selection.Cut Destination:=Columns("A:A")
+    Range("A1").Select
+    
+    ' mudando depanilha - Report.xls
+    
+    Windows("Report.xls").Activate
+    
+    ' copiando dados para - TitulosPagos.csv
+
+    Columns("A:D").Select
+    Selection.Copy
+    Windows("TitulosPagos.csv").Activate
+    Sheets.Add After:=Sheets(Sheets.Count)
+    Sheets("Plan1").Select
+    Sheets("Plan1").Name = "maxboletos"
+    ActiveSheet.Paste
+    Range("A1").Select
+    
+    ' procv
+
+    ultimaLinhaProcv = WorksheetFunction.CountA(Columns("D"))
+
+    Range("E1").Select
+    ActiveCell.FormulaR1C1 = "=VLOOKUP(RC[-3],TitulosPagos!C[-4]:C,5,0)"
+
+    Selection.AutoFill Destination:=Range("E1:E" & ultimaLinhaProcv)
+
+    'Range("E1").Select
+    
+    ' nomeando colunas na primeira linha
+
+    Rows("1:1").Select
+    Selection.Insert Shift:=xlDown
+    Range("A1").Select
+    ActiveCell.FormulaR1C1 = "CLIENTE"
+    Range("B1").Select
+    ActiveCell.FormulaR1C1 = "NÚM DOC"
+    Range("C1").Select
+    ActiveCell.FormulaR1C1 = "VALOR"
+    Range("D1").Select
+    ActiveCell.FormulaR1C1 = "VENCIMENTO"
+    Range("E1").Select
+    ActiveCell.FormulaR1C1 = "NÚM BANCO"
+    
+    ' Filtro números em #N/D
+    
+    Selection.AutoFilter
+    ActiveSheet.Range("E2").AutoFilter Field:=5, Criteria1:=">1"
+    
+    ' copiando para nova aba
+
+    Range("A1:E572").Select
+    Range("E1").Activate
+    Selection.Copy
+    Sheets.Add After:=Sheets(Sheets.Count)
+    Sheets("Plan2").Name = "pagos"
+    ActiveSheet.Paste
+    With Selection.Font
+        .ColorIndex = xlAutomatic
+        .TintAndShade = 0
+    End With
+    Selection.Font.Size = 12
+    Columns("D:D").EntireColumn.AutoFit
+    Range("A1").Select
+    Columns("A:A").EntireColumn.AutoFit
+    Columns("B:B").EntireColumn.AutoFit
+    
+    ' Fechando report
+    Workbooks("Report.xls").Close SaveChanges:=False
+    'Workbooks("macro.xlsm").Close SaveChanges:=False
+    
+    ' Salvando a planilha renomeando-a em formato de data
+
+    DirPath = "C:\Users\Jonatas\Documents\COMPARTILHAR\"
+    DateStr = Format(Date, "yyyy-mm-d")
+    ActiveWorkbook.SaveAs Filename:= _
+        DirPath & DateStr, FileFormat:= _
+        xlOpenXMLWorkbook, CreateBackup:=False
+    
+End Sub
